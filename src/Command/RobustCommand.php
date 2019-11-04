@@ -23,12 +23,14 @@ interface RobustCommand
     public function init(InputInterface $input): void;
 
     /**
-     * @return bool true on success, false otherwhise (e.g. nothing to do)
+     * @return bool true on success, false otherwise (e.g. nothing to do)
      */
     public function execute(): bool;
 
     /**
-     * @return bool true on successful shutdown, false otherwhise
+     * @param Exception|null $e
+     *
+     * @return bool true on successful shutdown, false otherwise
      */
     public function shutdown(?Exception $e = null): bool;
 }
